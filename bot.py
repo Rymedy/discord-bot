@@ -40,7 +40,7 @@ async def play(ctx, url : str):
         await ctx.send("Wait for the current playing music to end or use the 'stop' command")
         return
 
-    voiceChannel = discord.utils.get(ctx.guild.voice_channels, name='doms restroom')
+    voiceChannel = discord.utils.get(ctx.guild.voice_channels, name='VOICE-CHANNEL-NAME')
     await voiceChannel.connect()
     voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
 
