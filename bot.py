@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import youtube_dl
 import os
+import random
 
 client = commands.Bot(command_prefix = '.', description='Hi')
 
