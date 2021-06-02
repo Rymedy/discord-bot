@@ -29,7 +29,20 @@ async def clear(ctx, amount=5):
 @client.command()
 async def dhar(ctx):
 	await ctx.send("https://www.youtube.com/channel/UC_hK9fOxyy_TM8FJGXIyG8Q")
-
+	
+@client.command(aliases=['8ball', 'test'])
+async def ppsize(ctx):
+	responses = ['8=D',
+		     '8==D',
+		     '8===D',
+		     '8====D',
+		     '8=====D',
+		     '8======D',
+		     '8=======D',
+		     '8========D',
+		     '8=========D']
+	await ctx.send(f'PP Size:\n{random.choice(responses)}')
+	
 @client.command()
 async def commands(ctx):
     await ctx.send("```Standard Commands:\n.ping -- shows connection latency\n.clear -- purges 5 recent messages\n.dhar -- gives link to dhar mann's channel\n\nMusic Commands:\n.play {{URL}} -- plays a song off youtube\n.leave -- disconnects the bot from the voice channel\n.pause -- pauses the song current being played\n.resume -- resumes the song that is paused\n.stop -- stops the song being played```")
