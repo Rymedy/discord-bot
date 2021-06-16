@@ -10,7 +10,7 @@ import json
 
 client = commands.Bot(command_prefix = '.', description='Commands:')
 start_time = time.time()
-key = "TOKEN-KEY"
+key = "RGAPI-d25393ac-20aa-4b10-8d45-4c58776ec908"
 watcher = LolWatcher(key)
 
 client.blacklisted_users = []
@@ -137,13 +137,47 @@ async def dhar(ctx):
 
 @client.command(pass_context = True)
 @commands.has_role('botPerms')
+async def dream(ctx):
+    dream = """
+    OHHH DREAMMMM....
+    """
+    print(f".amogus was used by user with id: {user_id}")
+    channel = discord.utils.get(ctx.guild.voice_channels, name='doms restroom')
+    voice = await channel.connect()
+    source = FFmpegPCMAudio('Sounds/dream.mp3')
+    player = voice.play(source)
+    await ctx.send(dream)
+    time.sleep(3)
+    if voice.is_connected():
+        await voice.disconnect()
+
+
+@client.command(pass_context = True)
+@commands.has_role('botPerms')
+async def amogus(ctx):
+    amogus = """
+    The imposter is sus.
+    ඞ
+    """
+    print(f".amogus was used by user with id: {user_id}")
+    channel = discord.utils.get(ctx.guild.voice_channels, name='doms restroom')
+    voice = await channel.connect()
+    source = FFmpegPCMAudio('Sounds/amogus.mp3')
+    player = voice.play(source)
+    await ctx.send(amogus)
+    time.sleep(6.5)
+    if voice.is_connected():
+        await voice.disconnect()
+
+@client.command(pass_context = True)
+@commands.has_role('botPerms')
 async def fart(ctx):
     print(f".fart was used by user with id: {user_id}")
-    channel = discord.utils.get(ctx.guild.voice_channels, name='CHANNEL')
+    channel = discord.utils.get(ctx.guild.voice_channels, name='doms restroom')
     voice = await channel.connect()
     source = FFmpegPCMAudio('Sounds/soundreverb.mp3')
     player = voice.play(source)
-    time.sleep(1.34)
+    time.sleep(2.3)
     if voice.is_connected():
         await voice.disconnect()
 
@@ -151,11 +185,11 @@ async def fart(ctx):
 @commands.has_role('botPerms')
 async def sheesh(ctx):
     print(f".sheesh was used by user with id: {user_id}")
-    channel = discord.utils.get(ctx.guild.voice_channels, name='CHANNEL')
+    channel = discord.utils.get(ctx.guild.voice_channels, name='doms restroom')
     voice = await channel.connect()
     source = FFmpegPCMAudio('Sounds/sheesh.mp3')
     player = voice.play(source)
-    time.sleep(6.5)
+    time.sleep(8)
     if voice.is_connected():
         await voice.disconnect()
 
@@ -194,7 +228,7 @@ async def up_time(ctx):
 @client.command()
 async def commands(ctx):
     print(f".commands was used by user with id: {user_id}")
-    await ctx.send("```**Standard Commands:**\n.uptime -- shows how long the bot has been online\n.ping -- shows connection latency\n.clear -- purges 5 recent messages\n.dhar -- gives link to dhar mann's channel\n.fart -- plays fart reverb sound effect in the 'doms restroom' channel.\n.sheesh -- plays uto sheeeshee sound effect\n.ppsize -- shows pp size\n.dm -- sends a mysterious link\n\n**Music Commands:**\n.play {{URL}} -- plays a song off youtube\n.leave -- disconnects the bot from the voice channel\n.pause -- pauses the song current being played\n.resume -- resumes the song that is paused\n.stop -- stops the song being played\n\n**League of Legends Commands:**\n.lol -- shows league rank\n.opgg -- sends op.gg stats link and can take more than 1 argument\n```")
+    await ctx.send("```**Standard Commands:**\n.uptime -- shows how long the bot has been online\n.ping -- shows connection latency\n.clear -- purges 5 recent messages\n.dhar -- gives link to dhar mann's channel\n.fart -- plays fart reverb sound effect in the 'doms restroom' channel.\n.amogus -- the imposter is sus >:)\n.sheesh -- plays uto sheeeshee sound effect\n.ppsize -- shows pp size\n.dm -- sends a mysterious link\n\n**Music Commands:**\n.play {{URL}} -- plays a song off youtube\n.leave -- disconnects the bot from the voice channel\n.pause -- pauses the song current being played\n.resume -- resumes the song that is paused\n.stop -- stops the song being played\n\n**League of Legends Commands:**\n.lol -- shows league rank\n.opgg -- sends op.gg stats link and can take more than 1 argument\n```")
 
 # Music and Youtube related commands etc.
 @client.command()
@@ -278,4 +312,4 @@ def write_json(data, filename):
     with open(f"blacklist.json", "w") as file:
         json.dump(data, file, indent=4)
 
-client.run('TOKEN-KEY')
+client.run('ODQ5MTY5NTE4MzAyODU1MTc4.YLXQvQ.Roo_8ukO-MlBMyClgbLaycC2_Ng')
