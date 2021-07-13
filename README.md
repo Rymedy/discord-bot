@@ -8,3 +8,4 @@
 
 Note that:
 FFMPEG is installed as an executable.
+https://www.gyan.dev/ffmpeg/builds/
