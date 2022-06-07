@@ -193,26 +193,6 @@ async def sheesh(ctx):
     if voice.is_connected():
         await voice.disconnect()
 
-
-@client.command()
-async def ppsize(ctx):
-    print(f".ppsize was used by user with id: {user_id}")
-    responses = ['8=D',
-                '8==D',
-                '8===D',
-                '8====D',
-                '8=====D',
-                '8======D',
-                '8=======D',
-                '8========D',
-                '8=========D',
-                '8==========D',
-                '8===========D',
-                '8============D',
-                '8=============D',
-                '8===========================================D']
-    await ctx.send(f'PP Size:\n{random.choice(responses)}')
-
 @client.command()
 async def dm(ctx):
     print(f".dm was used by user with id: {user_id}")
